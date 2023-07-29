@@ -275,17 +275,13 @@ BaseRequest _$BaseRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BaseRequest {
-  String? get appType => throw _privateConstructorUsedError;
   String? get appVersion => throw _privateConstructorUsedError;
-  String? get conn => throw _privateConstructorUsedError;
   String? get deviceRef => throw _privateConstructorUsedError;
   String? get deviceToken => throw _privateConstructorUsedError;
   String? get deviceModel => throw _privateConstructorUsedError;
   String? get language => throw _privateConstructorUsedError;
   String? get lob => throw _privateConstructorUsedError;
   String? get nic => throw _privateConstructorUsedError;
-  String? get prePostType => throw _privateConstructorUsedError;
-  String? get primaryConn => throw _privateConstructorUsedError;
   String? get requestType => throw _privateConstructorUsedError;
   String? get platformName => throw _privateConstructorUsedError;
   String? get platformVersion => throw _privateConstructorUsedError;
@@ -306,17 +302,13 @@ abstract class $BaseRequestCopyWith<$Res> {
       _$BaseRequestCopyWithImpl<$Res, BaseRequest>;
   @useResult
   $Res call(
-      {String? appType,
-      String? appVersion,
-      String? conn,
+      {String? appVersion,
       String? deviceRef,
       String? deviceToken,
       String? deviceModel,
       String? language,
       String? lob,
       String? nic,
-      String? prePostType,
-      String? primaryConn,
       String? requestType,
       String? platformName,
       String? platformVersion,
@@ -338,17 +330,13 @@ class _$BaseRequestCopyWithImpl<$Res, $Val extends BaseRequest>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appType = freezed,
     Object? appVersion = freezed,
-    Object? conn = freezed,
     Object? deviceRef = freezed,
     Object? deviceToken = freezed,
     Object? deviceModel = freezed,
     Object? language = freezed,
     Object? lob = freezed,
     Object? nic = freezed,
-    Object? prePostType = freezed,
-    Object? primaryConn = freezed,
     Object? requestType = freezed,
     Object? platformName = freezed,
     Object? platformVersion = freezed,
@@ -357,17 +345,9 @@ class _$BaseRequestCopyWithImpl<$Res, $Val extends BaseRequest>
     Object? profileId = freezed,
   }) {
     return _then(_value.copyWith(
-      appType: freezed == appType
-          ? _value.appType
-          : appType // ignore: cast_nullable_to_non_nullable
-              as String?,
       appVersion: freezed == appVersion
           ? _value.appVersion
           : appVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      conn: freezed == conn
-          ? _value.conn
-          : conn // ignore: cast_nullable_to_non_nullable
               as String?,
       deviceRef: freezed == deviceRef
           ? _value.deviceRef
@@ -392,14 +372,6 @@ class _$BaseRequestCopyWithImpl<$Res, $Val extends BaseRequest>
       nic: freezed == nic
           ? _value.nic
           : nic // ignore: cast_nullable_to_non_nullable
-              as String?,
-      prePostType: freezed == prePostType
-          ? _value.prePostType
-          : prePostType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      primaryConn: freezed == primaryConn
-          ? _value.primaryConn
-          : primaryConn // ignore: cast_nullable_to_non_nullable
               as String?,
       requestType: freezed == requestType
           ? _value.requestType
@@ -438,17 +410,13 @@ abstract class _$$_BaseRequestCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? appType,
-      String? appVersion,
-      String? conn,
+      {String? appVersion,
       String? deviceRef,
       String? deviceToken,
       String? deviceModel,
       String? language,
       String? lob,
       String? nic,
-      String? prePostType,
-      String? primaryConn,
       String? requestType,
       String? platformName,
       String? platformVersion,
@@ -468,17 +436,13 @@ class __$$_BaseRequestCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appType = freezed,
     Object? appVersion = freezed,
-    Object? conn = freezed,
     Object? deviceRef = freezed,
     Object? deviceToken = freezed,
     Object? deviceModel = freezed,
     Object? language = freezed,
     Object? lob = freezed,
     Object? nic = freezed,
-    Object? prePostType = freezed,
-    Object? primaryConn = freezed,
     Object? requestType = freezed,
     Object? platformName = freezed,
     Object? platformVersion = freezed,
@@ -487,17 +451,9 @@ class __$$_BaseRequestCopyWithImpl<$Res>
     Object? profileId = freezed,
   }) {
     return _then(_$_BaseRequest(
-      appType: freezed == appType
-          ? _value.appType
-          : appType // ignore: cast_nullable_to_non_nullable
-              as String?,
       appVersion: freezed == appVersion
           ? _value.appVersion
           : appVersion // ignore: cast_nullable_to_non_nullable
-              as String?,
-      conn: freezed == conn
-          ? _value.conn
-          : conn // ignore: cast_nullable_to_non_nullable
               as String?,
       deviceRef: freezed == deviceRef
           ? _value.deviceRef
@@ -522,14 +478,6 @@ class __$$_BaseRequestCopyWithImpl<$Res>
       nic: freezed == nic
           ? _value.nic
           : nic // ignore: cast_nullable_to_non_nullable
-              as String?,
-      prePostType: freezed == prePostType
-          ? _value.prePostType
-          : prePostType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      primaryConn: freezed == primaryConn
-          ? _value.primaryConn
-          : primaryConn // ignore: cast_nullable_to_non_nullable
               as String?,
       requestType: freezed == requestType
           ? _value.requestType
@@ -563,17 +511,13 @@ class __$$_BaseRequestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_BaseRequest implements _BaseRequest {
   const _$_BaseRequest(
-      {this.appType,
-      this.appVersion,
-      this.conn,
+      {this.appVersion,
       this.deviceRef,
       this.deviceToken,
       this.deviceModel,
       this.language,
       this.lob,
       this.nic,
-      this.prePostType,
-      this.primaryConn,
       this.requestType,
       this.platformName,
       this.platformVersion,
@@ -585,11 +529,7 @@ class _$_BaseRequest implements _BaseRequest {
       _$$_BaseRequestFromJson(json);
 
   @override
-  final String? appType;
-  @override
   final String? appVersion;
-  @override
-  final String? conn;
   @override
   final String? deviceRef;
   @override
@@ -602,10 +542,6 @@ class _$_BaseRequest implements _BaseRequest {
   final String? lob;
   @override
   final String? nic;
-  @override
-  final String? prePostType;
-  @override
-  final String? primaryConn;
   @override
   final String? requestType;
   @override
@@ -621,7 +557,7 @@ class _$_BaseRequest implements _BaseRequest {
 
   @override
   String toString() {
-    return 'BaseRequest(appType: $appType, appVersion: $appVersion, conn: $conn, deviceRef: $deviceRef, deviceToken: $deviceToken, deviceModel: $deviceModel, language: $language, lob: $lob, nic: $nic, prePostType: $prePostType, primaryConn: $primaryConn, requestType: $requestType, platformName: $platformName, platformVersion: $platformVersion, provider: $provider, appLanguage: $appLanguage, profileId: $profileId)';
+    return 'BaseRequest(appVersion: $appVersion, deviceRef: $deviceRef, deviceToken: $deviceToken, deviceModel: $deviceModel, language: $language, lob: $lob, nic: $nic, requestType: $requestType, platformName: $platformName, platformVersion: $platformVersion, provider: $provider, appLanguage: $appLanguage, profileId: $profileId)';
   }
 
   @override
@@ -629,10 +565,8 @@ class _$_BaseRequest implements _BaseRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BaseRequest &&
-            (identical(other.appType, appType) || other.appType == appType) &&
             (identical(other.appVersion, appVersion) ||
                 other.appVersion == appVersion) &&
-            (identical(other.conn, conn) || other.conn == conn) &&
             (identical(other.deviceRef, deviceRef) ||
                 other.deviceRef == deviceRef) &&
             (identical(other.deviceToken, deviceToken) ||
@@ -643,10 +577,6 @@ class _$_BaseRequest implements _BaseRequest {
                 other.language == language) &&
             (identical(other.lob, lob) || other.lob == lob) &&
             (identical(other.nic, nic) || other.nic == nic) &&
-            (identical(other.prePostType, prePostType) ||
-                other.prePostType == prePostType) &&
-            (identical(other.primaryConn, primaryConn) ||
-                other.primaryConn == primaryConn) &&
             (identical(other.requestType, requestType) ||
                 other.requestType == requestType) &&
             (identical(other.platformName, platformName) ||
@@ -665,17 +595,13 @@ class _$_BaseRequest implements _BaseRequest {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      appType,
       appVersion,
-      conn,
       deviceRef,
       deviceToken,
       deviceModel,
       language,
       lob,
       nic,
-      prePostType,
-      primaryConn,
       requestType,
       platformName,
       platformVersion,
@@ -699,17 +625,13 @@ class _$_BaseRequest implements _BaseRequest {
 
 abstract class _BaseRequest implements BaseRequest {
   const factory _BaseRequest(
-      {final String? appType,
-      final String? appVersion,
-      final String? conn,
+      {final String? appVersion,
       final String? deviceRef,
       final String? deviceToken,
       final String? deviceModel,
       final String? language,
       final String? lob,
       final String? nic,
-      final String? prePostType,
-      final String? primaryConn,
       final String? requestType,
       final String? platformName,
       final String? platformVersion,
@@ -721,11 +643,7 @@ abstract class _BaseRequest implements BaseRequest {
       _$_BaseRequest.fromJson;
 
   @override
-  String? get appType;
-  @override
   String? get appVersion;
-  @override
-  String? get conn;
   @override
   String? get deviceRef;
   @override
@@ -738,10 +656,6 @@ abstract class _BaseRequest implements BaseRequest {
   String? get lob;
   @override
   String? get nic;
-  @override
-  String? get prePostType;
-  @override
-  String? get primaryConn;
   @override
   String? get requestType;
   @override

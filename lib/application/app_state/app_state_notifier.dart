@@ -95,13 +95,7 @@ class AppStateNotifier extends StateNotifier<AppState> {
       loggedIn: true,
       token: authResponse.deviceToken,
       language: authResponse.language,
-      primaryConn: authResponse.primaryConn,
-      conn: authResponse.conn,
-      isTemporary: authResponse.isStaff,
-      isStaff: authResponse.isStaff,
-      prePostType: authResponse.prePosType,
       email: authResponse.email,
-      lob: authResponse.lob,
       nic: authResponse.lob,
       profileId: authResponse.profileId,
     );
@@ -113,41 +107,10 @@ class AppStateNotifier extends StateNotifier<AppState> {
     );
   }
 
-  void changeConnection(String conn, String prePostType) {
-    state = state.copyWith(
-      conn: state.conn.startsWith("0") ? conn : "0$conn",
-      prePostType: prePostType,
-    );
-  }
-
-  Future<void> changeToPrimaryNumber() async {
-    state = state.copyWith(
-      isCurrentNumberExpired: true,
-    );
-
-    // final primaryConn = (await _localRepository.read(StorageKeys.primaryConn))
-    //     .getOrElse(() => '');
-
-    // final prePostType = (await _localRepository.read(StorageKeys.prePostType))
-    //     .getOrElse(() => '');
-
-    // changeConnection(primaryConn, prePostType);
-
-    state = state.copyWith(
-      isCurrentNumberExpired: false,
-    );
-  }
-
-  void changeNumberExpiredState(bool isExpired) {
-    state = state.copyWith(
-      isCurrentNumberExpired: isExpired,
-    );
-  }
-
   Future<void> changeEmail(String email) async {
-    // state = state.copyWith(
-    //   email: email,
-    // );
+    state = state.copyWith(
+      email: email,
+    );
     await _localRepository.createOrUpdate(
       StorageKeys.email,
       email,

@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -7,7 +8,7 @@ import '../../application/app_state/app_state_provider.dart';
 import '../../config.dart';
 import '../../domain/core/i_local_repository.dart';
 import 'api_helper.dart';
-// import 'connectivity.dart';
+import 'connectivity.dart';
 import 'local_repository.dart';
 
 final localStorageProvider = Provider<FlutterSecureStorage>((ref) {
@@ -54,8 +55,8 @@ final apiHelperProvider = Provider<ApiHelper>((ref) {
   );
 });
 
-// final internetConnectivityProvider = Provider<InternetConnectivity>((ref) {
-//   final internetConnectivity = InternetConnectivity(Connectivity());
+final internetConnectivityProvider = Provider<InternetConnectivity>((ref) {
+  final internetConnectivity = InternetConnectivity(Connectivity());
 
-//   return internetConnectivity;
-// });
+  return internetConnectivity;
+});

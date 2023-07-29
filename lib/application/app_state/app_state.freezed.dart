@@ -18,17 +18,10 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AppState {
   bool get loggedIn => throw _privateConstructorUsedError;
   String get language => throw _privateConstructorUsedError;
-  String get lob => throw _privateConstructorUsedError;
   String get nic => throw _privateConstructorUsedError;
-  bool get isTemporary => throw _privateConstructorUsedError;
-  bool get isStaff => throw _privateConstructorUsedError;
-  String get conn => throw _privateConstructorUsedError;
-  String get prePostType => throw _privateConstructorUsedError;
-  String get primaryConn => throw _privateConstructorUsedError;
   String get token => throw _privateConstructorUsedError;
   String get profileId => throw _privateConstructorUsedError;
   bool get isInternetConnected => throw _privateConstructorUsedError;
-  bool get isCurrentNumberExpired => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   Option<bool> get isAppStarted => throw _privateConstructorUsedError;
 
@@ -45,17 +38,10 @@ abstract class $AppStateCopyWith<$Res> {
   $Res call(
       {bool loggedIn,
       String language,
-      String lob,
       String nic,
-      bool isTemporary,
-      bool isStaff,
-      String conn,
-      String prePostType,
-      String primaryConn,
       String token,
       String profileId,
       bool isInternetConnected,
-      bool isCurrentNumberExpired,
       String email,
       Option<bool> isAppStarted});
 }
@@ -75,17 +61,10 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   $Res call({
     Object? loggedIn = null,
     Object? language = null,
-    Object? lob = null,
     Object? nic = null,
-    Object? isTemporary = null,
-    Object? isStaff = null,
-    Object? conn = null,
-    Object? prePostType = null,
-    Object? primaryConn = null,
     Object? token = null,
     Object? profileId = null,
     Object? isInternetConnected = null,
-    Object? isCurrentNumberExpired = null,
     Object? email = null,
     Object? isAppStarted = null,
   }) {
@@ -98,33 +77,9 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as String,
-      lob: null == lob
-          ? _value.lob
-          : lob // ignore: cast_nullable_to_non_nullable
-              as String,
       nic: null == nic
           ? _value.nic
           : nic // ignore: cast_nullable_to_non_nullable
-              as String,
-      isTemporary: null == isTemporary
-          ? _value.isTemporary
-          : isTemporary // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isStaff: null == isStaff
-          ? _value.isStaff
-          : isStaff // ignore: cast_nullable_to_non_nullable
-              as bool,
-      conn: null == conn
-          ? _value.conn
-          : conn // ignore: cast_nullable_to_non_nullable
-              as String,
-      prePostType: null == prePostType
-          ? _value.prePostType
-          : prePostType // ignore: cast_nullable_to_non_nullable
-              as String,
-      primaryConn: null == primaryConn
-          ? _value.primaryConn
-          : primaryConn // ignore: cast_nullable_to_non_nullable
               as String,
       token: null == token
           ? _value.token
@@ -137,10 +92,6 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
       isInternetConnected: null == isInternetConnected
           ? _value.isInternetConnected
           : isInternetConnected // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCurrentNumberExpired: null == isCurrentNumberExpired
-          ? _value.isCurrentNumberExpired
-          : isCurrentNumberExpired // ignore: cast_nullable_to_non_nullable
               as bool,
       email: null == email
           ? _value.email
@@ -164,17 +115,10 @@ abstract class _$$_AppStateCopyWith<$Res> implements $AppStateCopyWith<$Res> {
   $Res call(
       {bool loggedIn,
       String language,
-      String lob,
       String nic,
-      bool isTemporary,
-      bool isStaff,
-      String conn,
-      String prePostType,
-      String primaryConn,
       String token,
       String profileId,
       bool isInternetConnected,
-      bool isCurrentNumberExpired,
       String email,
       Option<bool> isAppStarted});
 }
@@ -192,17 +136,10 @@ class __$$_AppStateCopyWithImpl<$Res>
   $Res call({
     Object? loggedIn = null,
     Object? language = null,
-    Object? lob = null,
     Object? nic = null,
-    Object? isTemporary = null,
-    Object? isStaff = null,
-    Object? conn = null,
-    Object? prePostType = null,
-    Object? primaryConn = null,
     Object? token = null,
     Object? profileId = null,
     Object? isInternetConnected = null,
-    Object? isCurrentNumberExpired = null,
     Object? email = null,
     Object? isAppStarted = null,
   }) {
@@ -215,33 +152,9 @@ class __$$_AppStateCopyWithImpl<$Res>
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as String,
-      lob: null == lob
-          ? _value.lob
-          : lob // ignore: cast_nullable_to_non_nullable
-              as String,
       nic: null == nic
           ? _value.nic
           : nic // ignore: cast_nullable_to_non_nullable
-              as String,
-      isTemporary: null == isTemporary
-          ? _value.isTemporary
-          : isTemporary // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isStaff: null == isStaff
-          ? _value.isStaff
-          : isStaff // ignore: cast_nullable_to_non_nullable
-              as bool,
-      conn: null == conn
-          ? _value.conn
-          : conn // ignore: cast_nullable_to_non_nullable
-              as String,
-      prePostType: null == prePostType
-          ? _value.prePostType
-          : prePostType // ignore: cast_nullable_to_non_nullable
-              as String,
-      primaryConn: null == primaryConn
-          ? _value.primaryConn
-          : primaryConn // ignore: cast_nullable_to_non_nullable
               as String,
       token: null == token
           ? _value.token
@@ -254,10 +167,6 @@ class __$$_AppStateCopyWithImpl<$Res>
       isInternetConnected: null == isInternetConnected
           ? _value.isInternetConnected
           : isInternetConnected // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isCurrentNumberExpired: null == isCurrentNumberExpired
-          ? _value.isCurrentNumberExpired
-          : isCurrentNumberExpired // ignore: cast_nullable_to_non_nullable
               as bool,
       email: null == email
           ? _value.email
@@ -277,17 +186,10 @@ class _$_AppState implements _AppState {
   const _$_AppState(
       {required this.loggedIn,
       required this.language,
-      required this.lob,
       required this.nic,
-      required this.isTemporary,
-      required this.isStaff,
-      required this.conn,
-      required this.prePostType,
-      required this.primaryConn,
       required this.token,
       required this.profileId,
       required this.isInternetConnected,
-      required this.isCurrentNumberExpired,
       required this.email,
       required this.isAppStarted});
 
@@ -296,19 +198,7 @@ class _$_AppState implements _AppState {
   @override
   final String language;
   @override
-  final String lob;
-  @override
   final String nic;
-  @override
-  final bool isTemporary;
-  @override
-  final bool isStaff;
-  @override
-  final String conn;
-  @override
-  final String prePostType;
-  @override
-  final String primaryConn;
   @override
   final String token;
   @override
@@ -316,15 +206,13 @@ class _$_AppState implements _AppState {
   @override
   final bool isInternetConnected;
   @override
-  final bool isCurrentNumberExpired;
-  @override
   final String email;
   @override
   final Option<bool> isAppStarted;
 
   @override
   String toString() {
-    return 'AppState(loggedIn: $loggedIn, language: $language, lob: $lob, nic: $nic, isTemporary: $isTemporary, isStaff: $isStaff, conn: $conn, prePostType: $prePostType, primaryConn: $primaryConn, token: $token, profileId: $profileId, isInternetConnected: $isInternetConnected, isCurrentNumberExpired: $isCurrentNumberExpired, email: $email, isAppStarted: $isAppStarted)';
+    return 'AppState(loggedIn: $loggedIn, language: $language, nic: $nic, token: $token, profileId: $profileId, isInternetConnected: $isInternetConnected, email: $email, isAppStarted: $isAppStarted)';
   }
 
   @override
@@ -336,46 +224,20 @@ class _$_AppState implements _AppState {
                 other.loggedIn == loggedIn) &&
             (identical(other.language, language) ||
                 other.language == language) &&
-            (identical(other.lob, lob) || other.lob == lob) &&
             (identical(other.nic, nic) || other.nic == nic) &&
-            (identical(other.isTemporary, isTemporary) ||
-                other.isTemporary == isTemporary) &&
-            (identical(other.isStaff, isStaff) || other.isStaff == isStaff) &&
-            (identical(other.conn, conn) || other.conn == conn) &&
-            (identical(other.prePostType, prePostType) ||
-                other.prePostType == prePostType) &&
-            (identical(other.primaryConn, primaryConn) ||
-                other.primaryConn == primaryConn) &&
             (identical(other.token, token) || other.token == token) &&
             (identical(other.profileId, profileId) ||
                 other.profileId == profileId) &&
             (identical(other.isInternetConnected, isInternetConnected) ||
                 other.isInternetConnected == isInternetConnected) &&
-            (identical(other.isCurrentNumberExpired, isCurrentNumberExpired) ||
-                other.isCurrentNumberExpired == isCurrentNumberExpired) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.isAppStarted, isAppStarted) ||
                 other.isAppStarted == isAppStarted));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      loggedIn,
-      language,
-      lob,
-      nic,
-      isTemporary,
-      isStaff,
-      conn,
-      prePostType,
-      primaryConn,
-      token,
-      profileId,
-      isInternetConnected,
-      isCurrentNumberExpired,
-      email,
-      isAppStarted);
+  int get hashCode => Object.hash(runtimeType, loggedIn, language, nic, token,
+      profileId, isInternetConnected, email, isAppStarted);
 
   @JsonKey(ignore: true)
   @override
@@ -388,17 +250,10 @@ abstract class _AppState implements AppState {
   const factory _AppState(
       {required final bool loggedIn,
       required final String language,
-      required final String lob,
       required final String nic,
-      required final bool isTemporary,
-      required final bool isStaff,
-      required final String conn,
-      required final String prePostType,
-      required final String primaryConn,
       required final String token,
       required final String profileId,
       required final bool isInternetConnected,
-      required final bool isCurrentNumberExpired,
       required final String email,
       required final Option<bool> isAppStarted}) = _$_AppState;
 
@@ -407,27 +262,13 @@ abstract class _AppState implements AppState {
   @override
   String get language;
   @override
-  String get lob;
-  @override
   String get nic;
-  @override
-  bool get isTemporary;
-  @override
-  bool get isStaff;
-  @override
-  String get conn;
-  @override
-  String get prePostType;
-  @override
-  String get primaryConn;
   @override
   String get token;
   @override
   String get profileId;
   @override
   bool get isInternetConnected;
-  @override
-  bool get isCurrentNumberExpired;
   @override
   String get email;
   @override

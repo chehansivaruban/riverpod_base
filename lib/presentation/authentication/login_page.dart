@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   context.router.push(
-                    SignUpRoute(),
+                    const SignUpRoute(),
                   );
                   // Add your login logic here
                 },
@@ -59,7 +59,7 @@ class LoginPage extends StatelessWidget {
       decoration: InputDecoration(
         labelText: label,
         prefixIcon: Icon(icon),
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
       ),
     );
   }

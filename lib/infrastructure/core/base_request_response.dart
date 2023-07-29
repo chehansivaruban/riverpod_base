@@ -22,17 +22,13 @@ class BaseResponse with _$BaseResponse {
 @freezed
 class BaseRequest with _$BaseRequest {
   const factory BaseRequest({
-    String? appType,
     String? appVersion,
-    String? conn,
     String? deviceRef,
     String? deviceToken,
     String? deviceModel,
     String? language,
     String? lob,
     String? nic,
-    String? prePostType,
-    String? primaryConn,
     String? requestType,
     String? platformName,
     String? platformVersion,

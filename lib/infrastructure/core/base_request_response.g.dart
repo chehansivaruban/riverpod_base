@@ -28,17 +28,13 @@ Map<String, dynamic> _$$_BaseResponseToJson(_$_BaseResponse instance) =>
 
 _$_BaseRequest _$$_BaseRequestFromJson(Map<String, dynamic> json) =>
     _$_BaseRequest(
-      appType: json['appType'] as String?,
       appVersion: json['appVersion'] as String?,
-      conn: json['conn'] as String?,
       deviceRef: json['deviceRef'] as String?,
       deviceToken: json['deviceToken'] as String?,
       deviceModel: json['deviceModel'] as String?,
       language: json['language'] as String?,
       lob: json['lob'] as String?,
       nic: json['nic'] as String?,
-      prePostType: json['prePostType'] as String?,
-      primaryConn: json['primaryConn'] as String?,
       requestType: json['requestType'] as String?,
       platformName: json['platformName'] as String?,
       platformVersion: json['platformVersion'] as String?,
@@ -49,17 +45,13 @@ _$_BaseRequest _$$_BaseRequestFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_BaseRequestToJson(_$_BaseRequest instance) =>
     <String, dynamic>{
-      'appType': instance.appType,
       'appVersion': instance.appVersion,
-      'conn': instance.conn,
       'deviceRef': instance.deviceRef,
       'deviceToken': instance.deviceToken,
       'deviceModel': instance.deviceModel,
       'language': instance.language,
       'lob': instance.lob,
       'nic': instance.nic,
-      'prePostType': instance.prePostType,
-      'primaryConn': instance.primaryConn,
       'requestType': instance.requestType,
       'platformName': instance.platformName,
       'platformVersion': instance.platformVersion,

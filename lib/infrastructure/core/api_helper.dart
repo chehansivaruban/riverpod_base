@@ -2,12 +2,11 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../application/app_state/app_state.dart';
 import '../../application/app_state/app_state_notifier.dart';
-import '../../application/app_state/app_state_provider.dart';
+import '../../application/core/internet_connectivity/internet_connectivity_provider.dart';
 import '../../config.dart';
 import '../../utils/app_info.dart';
 import '../../utils/log_utils.dart';
@@ -31,7 +30,6 @@ class ApiHelper {
   final AppStateNotifier appStateNotifier;
   Dio dio;
   final Ref ref;
-  // final Reader read;
 
   bool isNumberExpireNotified = false;
 
@@ -47,8 +45,7 @@ class ApiHelper {
     bool isLive = false,
   }) async {
     try {
-      if (ref.read(internetConnectivityNotifierProvider).isConnected &&
-          !ref.read(appStateNotifierProvider).isCurrentNumberExpired) {
+      if (ref.read(internetConnectivityNotifierProvider).isConnected) {
         final action = path.split('scapp/').last;
 
         var params = addDefaultParams
@@ -84,7 +81,6 @@ class ApiHelper {
 
             if (!response.success && response.info == '485') {
               if (!isNumberExpireNotified) {
-                await appStateNotifier.changeToPrimaryNumber();
                 isNumberExpireNotified = true;
               }
             }
@@ -119,7 +115,6 @@ class ApiHelper {
         return const BaseResponse(
           success: false,
           code: 404,
-          // No localization needed
           error: 'No Network',
         );
       }
@@ -127,14 +122,12 @@ class ApiHelper {
       return const BaseResponse(
         success: false,
         code: 999,
-        // No localization needed
         error: 'Dio Error',
       );
     } catch (e) {
       return BaseResponse(
         success: false,
         code: 999,
-        // No localization needed
         error: Config.isDebugMode ? e.toString() : 'Dio Error',
       );
     }
@@ -144,26 +137,16 @@ class ApiHelper {
     final appInfo = await AppInfo.init();
 
     return BaseRequest(
-      // App Info
-      appType: appInfo.platform,
       appVersion: appInfo.appVersion,
       deviceRef: appInfo.deviceUUID,
       deviceModel: appInfo.deviceModel,
       platformName: appInfo.platform,
       platformVersion: appInfo.deviceVersion,
       provider: appInfo.provider,
-
-      // App State
       language: appState.language,
       deviceToken: appState.token,
-      primaryConn: appState.primaryConn,
-      conn: appState.conn,
-      prePostType: appState.prePostType,
-      lob: appState.lob,
       nic: appState.nic,
       profileId: appState.profileId,
-
-      //app
       appLanguage: 2,
     ).toJson();
   }

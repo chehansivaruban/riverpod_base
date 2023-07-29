@@ -25,10 +25,8 @@ class SplashPage extends HookConsumerWidget {
       appBar: AppBar(
         title: const Text('Title'),
       ),
-      body: Container(
-        child: Text(
-          "Splash",
-        ),
+      body: const Text(
+        "Splash",
       ),
     );
   }
