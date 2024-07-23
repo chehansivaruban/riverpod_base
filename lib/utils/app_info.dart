@@ -3,8 +3,6 @@ import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
-import 'package:flutter_hms_gms_availability/flutter_hms_gms_availability.dart';
-
 class AppInfo {
   AppInfo({
     this.appId = '',
@@ -30,8 +28,6 @@ class AppInfo {
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
 
-    bool isGMSAvailable = await FlutterHmsGmsAvailability.isGmsAvailable;
-
     if (Platform.isAndroid) {
       AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
 
@@ -43,7 +39,7 @@ class AppInfo {
         deviceModel: "${androidInfo.brand}_${androidInfo.model}",
         deviceVersion: androidInfo.version.release,
         deviceUUID: androidInfo.id,
-        provider: isGMSAvailable ? "gms" : "hms",
+        provider: "gms",
       );
     } else if (Platform.isIOS) {
       IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
