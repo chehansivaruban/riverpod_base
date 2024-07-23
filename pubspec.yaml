@@ -1,7 +1,7 @@
 name: riverpod_base
 description: A new Flutter project.
 
-publish_to: 'none'
+publish_to: 'test'
 
 version: 1.0.0+1
 
